@@ -1,0 +1,197 @@
+sudo yum install -y yum-utils
+    2  yum --help
+    3  sudo yum-config-manager \ --add-repo \ https://dowload.docker.com/linux/centos/docker-ce.repo
+    4  ls
+    5  sudo yum-config-manager --enable docker-ce-nightly
+    6  sudo yum-config-manager --enable docker-ce-test
+    7  yum list docker-ce --showduplicates
+    8  yum list docker-ce --showduplicates | sort -r
+    9  sudo yum-config-manager  --add-repo  https://dowload.docker.com/linux/centos/docker-ce.repo
+   10  sudo yum-config-manager  --add-repo  https://download.docker.com/linux/centos/docker-ce.repo
+   11  sudo yum-config-manager --enable docker-ce-nightly
+   12  sudo yum-config-manager --enable docker-ce-test
+   13  yum list docker-ce --showduplicates
+   14  yum list docker-ce --showduplicates | sort -r
+   15  sudo yum-config-manager --disable docker-ce-nightly
+   16  sudo yum-config-manager --disable docker-ce-test
+   17  yum list docker-ce --showduplicates | sort -r
+   18  sudo yum install docker-ce-20.10.9 docker-ce-cli-20.10.9 containerd.io
+   19  sudo systemctl start docker
+   20  sudo docker images
+   21  sudo docker run hello-world
+   22  docker -it ubuntu bash
+   23  sudo docker run -it ubuntu bash
+   24  docker build
+   25  docker build --help
+   26  docker images
+   27  sudo docker images
+   28  docker rmi --help
+   29  docker version
+   30  sudo docker version
+   31  docker pull mysql
+   32  sudo docker pull mysql
+   33  sudo docker images
+   34  sudo docker run mysql
+   35  ls
+   36  createdb a
+   37  sudo docker pull ubuntu:16.04
+   38  docker images
+   39  sudo docker images
+   40  sudo docker run -it ubuntu:16.04
+   41  docker ps
+   42  sudo docker ps
+   43  sudo docker run ubuntu:16.04
+   44  sudo docker run -it ubuntu:16.04
+   45  docker exec --help
+   46  sudo docker run -it mongo
+   47  clear
+   48  docker ps -a
+   49  sudo docker ps -a
+   50  sudo docker rmi aafb5e8f4d27
+   51  sudo docker remove  aafb5e8f4d27
+   52  sudo docker rm aafb5e8f4d27
+   53  sudo docker ps -a
+   54  sudo docker inspect
+   55  sudo docker run hello-world
+   56  sudo docker ps
+   57  sudo docker run ubuntu
+   58  docker ps
+   59  sudo docker ps
+   60  sudo docker run ps -a
+   61  sudo docker ps -a
+   62  sudo docker run -it ubuntu
+   63  sudo docker ps
+   64  sudo docker container ls
+   65  sudo docker run -it 399beab2fa49 bash
+   66  sudo docker exec -it 399beab2fa49 bash
+   67  sudo docker ps
+   68  sudo docker stop aafb5e8f4d27
+   69  sudo docker ps
+   70  sudo docker inspect cecf3d760724
+   71  ifconfig
+   72  ping google.com
+   73  docker logs cecf3d760724
+   74  sudo docker logs cecf3d760724
+   75  sudo docker container prune
+   76  sudo docker ps -a
+   77  sudo docker images
+   78  sudo docker run ubuntu echo hey
+   79  sudo docker logs ubuntu
+   80  sudo docker ps
+   81  sudo docker run -d alpino ping civo.com
+   82  sudo docker run -d alpine ping civo.com
+   83  ping www.civo.com
+   84  sudo docker ps
+   85  sudo docker logs 0a6e
+   86  sudo docker logs -since 5s 0a6e
+   87  sudo docker logs -since 1m 0a6e
+   88  sudo docker logs --since 1m 0a6e
+   89  sudo docker stop 0a6e
+   90  docker rm 0a6e
+   91  sudo docker rm 0a6e
+   92  sudo docker images
+   93  sudo docker rmi alpine
+   94  docker run -d -p 8080:80 nginx
+   95  sudo docker run -d -p 80:80 nginx
+   96  sudo docker logs 67a6d
+   97  sudo docker stop 67a6d
+   98  sudo docker rem 67a6d
+   99  sudo docker rm 67a6d
+  100  sudo docker ps
+  101  sudo docker ps -a
+  102  sudo docker run -it ubuntu
+  103  docker commit --help
+  104  sudo docker ps -a
+  105  sudo docker commit "names.txt added" 8fb5c95523fd names_ubuntu:1.01
+  106  sudo docker commit -m "names.txt added" 8fb5c95523fd names_ubuntu:1.01
+  107  sudo docker images
+  108  sudo docker ps
+  109  sudo docker ps -a
+  110  sudo docker stop 8fb5c95523fd
+  111  sudo docker ps -a
+  112  sudo docker run names_ubuntu:1.01
+  113  sudo docker exec names_ubuntu:1.01 bash
+  114  sudo docker exec -it names_ubuntu:1.01 bash
+  115  sudo docker ps
+  116  sudo docker ps -a
+  117  sudo docker exec -it 1c932a93499f bash
+  118  sudo docker run -it names_ubuntu:1.01
+  119  sudo docker images -q
+  120  sudo docker images --help
+  121  sudo docker rmi $(sudo docker images -q)
+  122  sudo docker rm 1c932a93499f
+  123  sudo docker rmi $(sudo docker images -q)
+  124  sudo docker ps -a
+  125  sudo docker rm $(sudo docker ps -a)
+  126  sudo docker ps -a
+  127  sudo docker rmi $(sudo docker images -q)
+  128  sudo docker images
+  129  sudo docker run ubuntu:16.01
+  130  sudo docker run ubuntu:16.04
+  131  sudo docker images
+  132  sudo docker inspect b6f507652425
+  133  sudo docker images -q --no-trunc
+  134  sudo docker images
+  135  sudo docker run hello-world
+  136  sudo docker run centos
+  137  sudo docker images
+  138   docker login
+  139  sudo docker login
+  140  touch dockerfile
+  141  vi dockerfile
+  142  docker builf --help
+  143  docker build --help
+  144  sudo docker build -t myimage:1.01
+  145  ls
+  146  mkdir 1
+  147  mv dockerfile 1
+  148  ls
+  149  cd 1
+  150  sudo docker build -t myimage:1.01 .
+  151  docker image
+  152  docker images
+  153  sudo docker images
+  154  sudo docker login
+  155  sudo docker images
+  156  sudo docker run myimage
+  157  docker push amitghanvat/repo1:1.01
+  158  sudo docker push amitghanvat/repo1:1.01
+  159  sudo docker push amitghanvat/repo1:myimage
+  160  sudo docker push amitghanvat/repo1:1.01
+  161  sudo docker push amitghanvat/repo1:myimage:1.01
+  162  docker push --help
+  163  sudo docker push -a myimage:1.01
+  164  sudo docker push -a
+  165  sudo docker push -a amitghanvat
+  166  sudo docker push -a amitghanvat/repo1
+  167  sudo docker push -a amitghanvat/repo1:1.01
+  168  sudo docker push -v amitghanvat/repo1:1.01
+  169  sudo docker push -q amitghanvat/repo1:1.01
+  170  sudo docker images
+  171  sudo docker push c567f5da5798
+  172  sudo docker push c567f5da5798:1.01
+  173  sudo docker push amitghanvat/repo1:16.04
+  174  sudo docker login
+  175  sudo docker push amitghanvat/repo1:16.04
+  176  sudo docker tag myimage:1.011 repo1:1.02
+  177  sudo docker tag c567f5da5798:1.011 repo1:1.02
+  178  sudo docker images
+  179  sudo docker tag c567f5da5798:1.01 repo1:1.02
+  180  sudo docker tag c567f5da5798:1.01 repo1:1.01
+  181  sudo docker tag myimage:1.01 repo1:1.01
+  182  sudo docker push repo1:1.01
+  183  sudo docker images
+  184  sudo docker push amitghanvat/repo1:1.01
+  185  sudo docker build -t image2 .
+  186  sudo docker run image2
+  187  docker push -a amitghanvat/repo1
+  188  sudo docker push -a amitghanvat/repo1
+  189  sudo docker push amitghanvat/repo1:1.01
+  190  docker rmi repo1
+  191  sudo docker rmi repo1
+  192  docker images
+  193  sudo docker images
+  194  sudo docker tag ubuntu:16.04 amitghanvat/repo1:16.04
+  195  sudo docker images
+  196  sudo docker push amitghanvat/repo1:16.04
+  197  history
